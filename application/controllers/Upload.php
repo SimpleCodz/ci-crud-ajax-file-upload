@@ -74,6 +74,9 @@ class Upload extends CI_Controller{
 
 	function edit(){
 		$id = $this->input->post('id');
+		$img_data = $this->m_upload->getById($id);	
+		$img_src = FCPATH.'assets/images/'.$img_data->gambar;
+
 		$judul = $this->input->post('judul');
 		
 		if($_FILES['file']['name'] == ''){
@@ -108,9 +111,11 @@ class Upload extends CI_Controller{
 			}else{
 				$data = array('upload_data' => $this->upload->data());
 				$image= $data['upload_data']['file_name'];
-
-				$this->m_upload->update($id, $judul, $image);
-				$this->output->set_content_type('application/json')->set_output(json_encode(array('status'=>true)));
+				
+				if(unlink($img_src)){
+					$this->m_upload->update($id, $judul, $image);
+					$this->output->set_content_type('application/json')->set_output(json_encode(array('status'=>true)));
+				}
 			}
 		}
 	}

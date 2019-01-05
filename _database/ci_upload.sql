@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2019 at 11:33 AM
+-- Generation Time: Jan 05, 2019 at 11:58 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -39,12 +39,12 @@ CREATE TABLE `tb_galeri` (
 --
 
 INSERT INTO `tb_galeri` (`id`, `judul`, `gambar`) VALUES
-(3, 'SimpleCodz Logo', 'e1e22f0fe21d0d7b127be3b574d7ad46.png'),
-(17, 'mylogo', '6727ede4571422f5cb86dd0b97e0e6f1.png'),
-(19, 'number 10', 'cc94035c0ee3b3bb8d4dcd6f1129ea7b.png'),
-(21, 'number 1', 'a675fdf4f770722e6ceec558a53ed7ad.png'),
-(24, 'Nomor 12', '200d3ff6e5912097f1f9c75ef4452ea3.png'),
-(25, 'no1', '49913ac9180decb0d0cd40b79382e048.png');
+(26, 'Sergio Ramos', 'be4175151205e5dca49d496a777de477.png'),
+(27, 'Keylor Navas', '12459028b0e8860d6a6a8be56840f6d2.png'),
+(28, 'Luka Modric', '673f0b1ef0a8fdef1283a3014df6a525.png'),
+(29, 'Mariano Diaz', '4593bd5b4e12014101be265e0808ec8a.png'),
+(30, 'Marcelo', '9c66dc4e97dec68841b5667493d2546e.png'),
+(31, 'Karim Benzema', 'dada1e21fdb5360131acbc31cf6db7c2.png');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +64,7 @@ ALTER TABLE `tb_galeri`
 -- AUTO_INCREMENT for table `tb_galeri`
 --
 ALTER TABLE `tb_galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

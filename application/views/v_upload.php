@@ -145,6 +145,8 @@
 				e.stopPropagation();
 				url = '';
 
+				$('#btn_upload').attr('disabled','disabled').text('Tunggu...');
+				
 				if(save_label == 'add'){
 					url = '<?php echo base_url();?>index.php/upload/do_upload';
 				}else if(save_label == 'edit'){
@@ -185,6 +187,7 @@
 								$('#fail_upload_msg').html(error);
 							}
 						}
+						$('#btn_upload').removeAttr('disabled','disabled').text('Upload');
 					}
 				});
 			});
